@@ -1,5 +1,6 @@
 import { CalendarIcon, UserIcon, BarChartIcon, MailIcon, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 const features = [
   {
@@ -24,8 +25,40 @@ const features = [
   }
 ];
 
+const EmailIntegrationModal = ({ open, onClose }) => {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+      <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-lg w-full relative glass-card">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-cvk-purple text-2xl font-bold"
+        >
+          ×
+        </button>
+        <h2 className="text-2xl font-bold mb-2 text-cvk-darkpurple">Email Integration</h2>
+        <p className="text-gray-600 mb-4">
+          Integrate with SMTP, Gmail, SendGrid, Amazon SES and more.<br />
+          <span className="text-cvk-purple font-medium">Connect your email to automate workflows and boost productivity!</span>
+        </p>
+        <ul className="space-y-2 mb-4">
+          <li>✅ Easy setup with major providers</li>
+          <li>✅ Real-time sync</li>
+          <li>✅ Secure & reliable</li>
+        </ul>
+        <button
+          className="w-full bg-gradient-to-r from-cvk-purple via-cvk-blue to-cvk-darkpurple text-white py-2 rounded-lg font-semibold shadow hover:scale-105 transition"
+        >
+          Start Integration
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const Features = () => {
   const navigate = useNavigate();
+  const [emailModalOpen, setEmailModalOpen] = useState(false);
   return (
     <section id="features" className="section-padding bg-gray-50">
       <div className="container-custom">
@@ -82,6 +115,7 @@ const Features = () => {
             </div>
           ))}
         </div>
+        <EmailIntegrationModal open={emailModalOpen} onClose={() => setEmailModalOpen(false)} />
         
         <div className="mt-16 rounded-2xl p-1" style={{ background: "linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%)", boxShadow: "0 4px 24px 0 rgba(66,133,244,0.08)" }}>
           <div className="bg-white rounded-2xl p-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">

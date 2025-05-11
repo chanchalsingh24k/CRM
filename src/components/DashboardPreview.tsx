@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
-import { User, Bell, Settings, Users, Briefcase, PieChart, List, LogOut } from "lucide-react";
+import { User, Bell, Settings, Users, Briefcase, PieChart, List, LogOut, CreditCard } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const chartData = [
@@ -45,8 +45,18 @@ const DashboardPreview = () => {
                 <Link to="/deals" className="flex items-center space-x-2 text-gray-700"><Briefcase size={18}/> Deals</Link>
                 <Link to="/reports" className="flex items-center space-x-2 text-gray-700"><PieChart size={18}/> Reports</Link>
                 <Link to="/settings" className="flex items-center space-x-2 text-gray-700"><Settings size={18}/> Settings</Link>
+                <Link to="/payment-method" className="flex items-center space-x-2 text-gray-700"><CreditCard size={18}/> Payment Method</Link>
               </nav>
-              <div className="flex items-center space-x-2 text-gray-400 cursor-pointer hover:text-cvk-purple"><LogOut size={18}/> Logout</div>
+              <div
+                className="flex items-center space-x-2 text-gray-400 cursor-pointer hover:text-cvk-purple"
+                onClick={() => {
+                  localStorage.clear();
+                  sessionStorage.clear();
+                  navigate('/login');
+                }}
+              >
+                <LogOut size={18}/> Logout
+              </div>
             </aside>
             {/* Main Content */}
             <div className="flex-1 p-6 space-y-6">

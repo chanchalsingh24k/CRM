@@ -13,7 +13,7 @@ const ContactManagement = () => {
         </div>
         <div>
           <img
-            src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80"
+            src="https://www.helloleads.io/blog/wp-content/uploads/2022/01/crm.png"
             alt="Contact"
             className="rounded-xl w-full object-cover"
           />
@@ -23,8 +23,7 @@ const ContactManagement = () => {
         <div className="bg-white rounded-xl border p-8 flex flex-col items-center text-center shadow-sm">
           <svg width="48" height="48" fill="none" className="mb-4" style={{ color: '#a78bfa' }} viewBox="0 0 24 24"><path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13 1.05.37 2.07.72 3.06a2 2 0 0 1-.45 2.11l-.27.27a16 16 0 0 0 6.29 6.29l.27-.27a2 2 0 0 1 2.11-.45c.99.35 2.01.59 3.06.72A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           <h3 className="font-bold text-lg mb-2">Call us directly</h3>
-          <div className="text-2xl font-bold mb-2">08914567896</div>
-          
+          <a href="tel:08914567896" className="text-2xl font-bold mb-2 text-black hover:text-cvk-purple transition-colors duration-200" style={{ textDecoration: 'none', letterSpacing: '1px' }}>08914567896</a>
         </div>
         <div className="bg-white rounded-xl border p-8 flex flex-col items-center text-center shadow-sm">
           <svg width="48" height="48" fill="none" className="mb-4" style={{ color: '#0ea5e9' }} viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2"/><path d="M8 10h.01M12 10h.01M16 10h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>

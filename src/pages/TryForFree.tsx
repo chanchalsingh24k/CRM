@@ -1,12 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import Logo from "@/components/Logo";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, CheckIcon } from "lucide-react";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
+import { ArrowLeft, CheckIcon, Mail, User, Building2, Phone } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -30,8 +27,8 @@ const benefits = [
 
 const TryForFree = () => {
   const navigate = useNavigate();
-  
-  const form = useForm<FormValues>({
+
+  const { register, handleSubmit } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: "",
@@ -43,111 +40,113 @@ const TryForFree = () => {
 
   const onSubmit = (data: FormValues) => {
     console.log("Form submitted:", data);
-    // In a real app, you would send this data to your backend
     navigate("/login");
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cvk-purple/5 to-cvk-blue/5">
       <div className="container-custom py-4">
-        <Button 
-          variant="ghost" 
-          className="flex items-center text-gray-600 mb-6" 
+        <Button
+          variant="ghost"
+          className="flex items-center text-gray-600 mb-6"
           onClick={() => navigate("/")}
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to home
         </Button>
       </div>
-      
+
       <div className="container-custom max-w-6xl">
         <div className="grid md:grid-cols-2 gap-8 items-center pb-20">
           {/* Left column - Form */}
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <div className="mb-8">
-              <Logo className="mb-6" />
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                Start your free trial
-              </h1>
-              <p className="text-gray-600">
-                Get started with CVK CRM today. No credit card required.
-              </p>
-            </div>
-
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-                <FormField
-                  control={form.control}
-                  name="fullName"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Full Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your name" {...field} />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Work Email</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="name@company.com" {...field} />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="companyName"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Company Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your company" {...field} />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="phoneNumber"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone Number (Optional)</FormLabel>
-                      <FormControl>
-                        <Input type="tel" placeholder="+1 (555) 000-0000" {...field} />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-cvk-purple hover:bg-cvk-darkpurple text-lg py-6"
-                >
-                  Start your free trial
-                </Button>
-                
-                <p className="text-xs text-center text-gray-500 mt-4">
-                  By signing up, you agree to our Terms of Service and Privacy Policy.
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="w-full max-w-md mx-auto bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl border-4 border-transparent bg-clip-padding p-8"
+              style={{
+                borderImage: "linear-gradient(90deg, #a78bfa 0%, #38bdf8 100%) 1",
+                boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
+              }}
+            >
+              {/* Logo and Header moved inside the card */}
+              <div className="flex flex-col items-center text-center mb-8">
+                <Logo className="w-16 h-16 rounded-full shadow mb-4" />
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">Start your free trial</h1>
+                <p className="text-gray-600 max-w-xs">
+                  Get started with CVK CRM today. No credit card required.
                 </p>
-              </form>
-            </Form>
+              </div>
+
+              <div className="space-y-5">
+                <div>
+                  <label className="block font-semibold mb-1">Full Name</label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 text-cvk-purple" size={18} />
+                    <Input
+                      {...register("fullName", { required: true })}
+                      placeholder="Your name"
+                      className="pl-10 py-3 rounded-xl border border-cvk-purple/30 shadow focus:border-cvk-purple focus:ring-cvk-purple transition bg-white/90"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block font-semibold mb-1">Work Email</label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-cvk-blue" size={18} />
+                    <Input
+                      {...register("email", { required: true })}
+                      type="email"
+                      placeholder="name@company.com"
+                      className="pl-10 py-3 rounded-xl border border-cvk-blue/30 shadow focus:border-cvk-blue focus:ring-cvk-blue transition bg-white/90"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block font-semibold mb-1">Company Name</label>
+                  <div className="relative">
+                    <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 text-cvk-purple" size={18} />
+                    <Input
+                      {...register("companyName", { required: true })}
+                      placeholder="Your company"
+                      className="pl-10 py-3 rounded-xl border border-cvk-purple/30 shadow focus:border-cvk-purple focus:ring-cvk-purple transition bg-white/90"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block font-semibold mb-1">Phone Number (Optional)</label>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-cvk-blue" size={18} />
+                    <Input
+                      {...register("phoneNumber")}
+                      type="tel"
+                      placeholder="+1 (555) 000-0000"
+                      className="pl-10 py-3 rounded-xl border border-cvk-blue/30 shadow focus:border-cvk-blue focus:ring-cvk-blue transition bg-white/90"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full mt-8 bg-gradient-to-r from-cvk-purple to-cvk-blue text-lg py-4 rounded-xl shadow-lg font-bold tracking-wide transition-all duration-200 hover:scale-105"
+              >
+                🚀 Start your free trial
+              </Button>
+
+              <p className="text-xs text-center text-gray-500 mt-4">
+                By signing up, you agree to our{" "}
+                <a href="/terms-of-service" className="underline text-cvk-purple">Terms of Service</a> and{" "}
+                <a href="/privacy-policy" className="underline text-cvk-blue">Privacy Policy</a>.
+              </p>
+            </form>
           </div>
-          
+
           {/* Right column - Benefits */}
           <div className="flex flex-col justify-center px-4 md:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Why choose CVK CRM?
             </h2>
-            
+
             <div className="space-y-5">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
@@ -162,7 +161,7 @@ const TryForFree = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-12 bg-cvk-lightpurple rounded-xl p-6">
               <p className="text-lg font-medium text-cvk-darkpurple mb-2">
                 "CVK CRM has transformed how we manage relationships with our clients. The intuitive interface and powerful automations save us hours every week."

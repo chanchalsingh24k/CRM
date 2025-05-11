@@ -1,5 +1,11 @@
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import Partner from "./pages/Partner";
+import Carrier from "./pages/Carrier";
+import Update from "./pages/Update";
+import CustomerService from "./pages/CustomerService";
+import Support from "./pages/Support";
+import Blog from "./pages/Blog";
 
 const Footer = () => {
   return (
@@ -24,7 +30,7 @@ const Footer = () => {
                 className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 hover:bg-cvk-purple hover:text-white transition-colors"
                 aria-label="Instagram"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.25a6.25 6.25 0 1 1-6.25 6.25 6.25 6.25 0 0 1 6.25-6.25zm0 1.5a4.75 4.75 0 1 0 4.75 4.75 4.75 4.75 0 0 0-4.75-4.75zm6.25 1.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 3.5zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.25a6.25 6.25 0 1 1-6.25 6.25 6.25 6.25 0 0 1 6.25-6.25zm0 1.5a4.75 4.75 0 1 0 4.75 4.75 4.75 4.75 0 0 0-4.75-4.75zm6.25 1.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
               </a>
               <a 
                 href="#" 
@@ -49,7 +55,7 @@ const Footer = () => {
               <li><Link to="/features" className="text-gray-600 hover:text-cvk-purple">Features</Link></li>
               <li><Link to="/pricing" className="text-gray-600 hover:text-cvk-purple">Pricing</Link></li>
               <li><Link to="/security" className="text-gray-600 hover:text-cvk-purple">Security</Link></li>
-              <li><Link to="/updates" className="text-gray-600 hover:text-cvk-purple">Updates</Link></li>
+              <li><Link to="/update" className="text-gray-600 hover:text-cvk-purple">Updates</Link></li>
             </ul>
           </div>
           
@@ -58,7 +64,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link to="/sales" className="text-gray-600 hover:text-cvk-purple">Sales</Link></li>
               <li><Link to="/marketing" className="text-gray-600 hover:text-cvk-purple">Marketing</Link></li>
-              <li><Link to="/customer-service" className="text-gray-600 hover:text-cvk-purple">Customer Service</Link></li>
+              <li><Link to="/customerservice" className="text-gray-600 hover:text-cvk-purple">Customer Service</Link></li>
               <li><Link to="/support" className="text-gray-600 hover:text-cvk-purple">Support</Link></li>
             </ul>
           </div>
@@ -77,8 +83,8 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               <li><Link to="/about" className="text-gray-600 hover:text-cvk-purple">About</Link></li>
-              <li><Link to="/careers" className="text-gray-600 hover:text-cvk-purple">Careers</Link></li>
-              <li><Link to="/partners" className="text-gray-600 hover:text-cvk-purple">Partners</Link></li>
+              <li><Link to="/carrier" className="text-gray-600 hover:text-cvk-purple">Careers</Link></li>
+              <li><Link to="/partner" className="text-gray-600 hover:text-cvk-purple">Partners</Link></li>
               <li><Link to="/contact-us" className="text-gray-600 hover:text-cvk-purple">Contact Us</Link></li>
             </ul>
           </div>
@@ -89,9 +95,9 @@ const Footer = () => {
             © 2025 CVK CRM. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-            <a href="#" className="hover:text-cvk-purple">Privacy Policy</a>
-            <a href="#" className="hover:text-cvk-purple">Terms of Service</a>
-            <a href="#" className="hover:text-cvk-purple">Cookie Settings</a>
+            <Link to="/privacy-policy" className="hover:text-cvk-purple">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-cvk-purple">Terms of Service</Link>
+            <Link to="/cookie-settings" className="hover:text-cvk-purple">Cookie Settings</Link>
           </div>
         </div>
       </div>

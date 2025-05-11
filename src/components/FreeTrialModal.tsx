@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface AuthModalProps {
-  open: boolean;
-  onClose: () => void;
+  open?: boolean;
+  onClose?: () => void;
 }
 
-const AuthModal: React.FC<AuthModalProps> = ({ open, onClose }) => {
+const AuthModal: React.FC<AuthModalProps> = ({ open: openProp, onClose }) => {
+  const [open, setOpen] = useState(openProp ?? false);
+
+  useEffect(() => {
+    if (openProp === undefined) {
+      const timer = setTimeout(() => setOpen(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [openProp]);
+
+  const handleClose = () => {
+    setOpen(false);
+    if (onClose) onClose();
+  };
+
   const [mode, setMode] = useState<'signup' | 'login'>('signup');
 
   if (!open) return null;
@@ -16,16 +30,16 @@ const AuthModal: React.FC<AuthModalProps> = ({ open, onClose }) => {
       background: 'rgba(0,0,0,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000
     }}>
       <div style={{
-        background: '#fff', padding: '2rem', borderRadius: '12px', maxWidth: 400, width: '100%', position: 'relative', boxShadow: '0 4px 32px rgba(0,0,0,0.15)'
-      }}>
-        <button onClick={onClose} style={{
-          position: 'absolute', top: 16, right: 16, background: 'none', border: 'none', fontSize: 24, cursor: 'pointer', color: '#333'
+        background: 'linear-gradient(135deg, #ffffff, #f8f9fa)', padding: '2rem', borderRadius: '16px', maxWidth: 400, width: '100%', position: 'relative', boxShadow: '0 8px 32px rgba(0,0,0,0.1)', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)', transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+      }} onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)'; }}>
+        <button onClick={handleClose} style={{
+          position: 'absolute', top: 16, right: 16, background: 'none', border: 'none', fontSize: 24, cursor: 'pointer', color: '#333', zIndex: 2
         }} aria-label="Close">×</button>
         {mode === 'signup' ? (
           <>
             <h2 style={{ fontWeight: 700, fontSize: 28, marginBottom: 8 }}>Wait! Don't Miss Your Free Trial!</h2>
             <p style={{ color: '#444', marginBottom: 24 }}>
-              Experience the power of AI-driven CRM. Sign up now and get 14 days free—no credit card required!
+              Experience the power of CVK CRM. Sign up now and get 14 days free—no credit card required!
             </p>
             <form>
               <div style={{ marginBottom: 16 }}>
@@ -36,7 +50,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ open, onClose }) => {
                 <label style={{ fontWeight: 500, display: 'block', marginBottom: 4 }}>Phone Number or Email</label>
                 <input type="text" placeholder="Enter your phone number or email" style={{ width: '100%', padding: 12, borderRadius: 6, border: '1px solid #ddd', fontSize: 16 }} />
               </div>
-              <button type="submit" style={{ width: '100%', background: '#222', color: '#fff', padding: 14, borderRadius: 6, fontWeight: 700, fontSize: 18, border: 'none', cursor: 'pointer', marginBottom: 8 }}>
+              <button type="submit" style={{ width: '100%', background: '#222', color: '#fff', padding: 14, borderRadius: 6, fontWeight: 700, fontSize: 18, border: 'none', cursor: 'pointer', marginBottom: 8, transition: 'background 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.background = '#333'} onMouseOut={(e) => e.currentTarget.style.background = '#222'}>
                 Submit
               </button>
             </form>
@@ -59,7 +73,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ open, onClose }) => {
                 <label style={{ fontWeight: 500, display: 'block', marginBottom: 4 }}>Password</label>
                 <input type="password" placeholder="Enter your password" style={{ width: '100%', padding: 12, borderRadius: 6, border: '1px solid #ddd', fontSize: 16 }} />
               </div>
-              <button type="submit" style={{ width: '100%', background: '#222', color: '#fff', padding: 14, borderRadius: 6, fontWeight: 700, fontSize: 18, border: 'none', cursor: 'pointer', marginBottom: 8 }}>
+              <button type="submit" style={{ width: '100%', background: '#222', color: '#fff', padding: 14, borderRadius: 6, fontWeight: 700, fontSize: 18, border: 'none', cursor: 'pointer', marginBottom: 8, transition: 'background 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.background = '#333'} onMouseOut={(e) => e.currentTarget.style.background = '#222'}>
                 Login
               </button>
             </form>

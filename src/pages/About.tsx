@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -103,7 +102,10 @@ const About = () => {
                 We're always looking for talented individuals who share our vision and values. 
                 Check our careers page for current openings.
               </p>
-              <Button className="bg-cvk-purple hover:bg-cvk-darkpurple">
+              <Button
+                className="bg-cvk-purple hover:bg-cvk-darkpurple"
+                onClick={() => navigate("/careers")}
+              >
                 View Careers
               </Button>
             </div>

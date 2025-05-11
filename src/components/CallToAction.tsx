@@ -30,9 +30,9 @@ const CallToAction = () => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" alt="Slack" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Zoom_Communications_Logo.svg" alt="Zoom" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Shopify_logo_2018.svg" alt="Shopify" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
+            <img src="https://i.pinimg.com/474x/82/32/d7/8232d770d661e24e9519c4340454d003.jpg" alt="Slack" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
+            <img src="https://w7.pngwing.com/pngs/805/460/png-transparent-zoom-logo-thumbnail.png" alt="Zoom" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfx23eCHnDU61VyNErP58BGwfyG_PHWAXBuw&s" alt="Shopify" className="h-12 w-auto grayscale opacity-80 hover:opacity-100 transition-all duration-200" />
           </div>
         </div>
       </div>

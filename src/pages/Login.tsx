@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -31,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cvk-purple/5 to-cvk-blue/5 flex flex-col">
+    <div className="min-h-screen animated-gradient flex flex-col">
       <div className="container-custom py-4">
         <div className="flex justify-between">
           <Button 
@@ -55,9 +54,13 @@ const Login = () => {
       
       <div className="flex-1 flex items-center justify-center px-4">
         <div className="w-full max-w-md">
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+          <div className="glass-card p-8 border border-gray-100 shadow-2xl">
             <div className="text-center mb-6">
-              <Logo className="mx-auto mb-6" />
+              <div className="flex justify-center mb-6">
+                <div className="bg-white/80 border-4 border-cvk-lightpurple shadow-2xl flex items-center justify-center w-32 h-32 transition-transform duration-300 hover:scale-105 rounded-xl">
+                  <Logo className="w-24 h-24 object-contain" />
+                </div>
+              </div>
               <h1 className="text-2xl font-bold text-gray-900">
                 Login
               </h1>
@@ -98,7 +101,7 @@ const Login = () => {
                       value="admin"
                       checked={selectedRole === "admin"}
                       onChange={() => setSelectedRole("admin")}
-                      className="h-4 w-4 text-cvk-purple focus:ring-cvk-purple border-gray-300"
+                      className="h-5 w-5 accent-cvk-purple focus:ring-2 focus:ring-cvk-blue transition-all duration-200"
                     />
                     <Label htmlFor="admin" className="font-normal">Admin</Label>
                   </div>
@@ -111,7 +114,7 @@ const Login = () => {
                       value="employee"
                       checked={selectedRole === "employee"}
                       onChange={() => setSelectedRole("employee")}
-                      className="h-4 w-4 text-cvk-purple focus:ring-cvk-purple border-gray-300"
+                      className="h-5 w-5 accent-cvk-purple focus:ring-2 focus:ring-cvk-blue transition-all duration-200"
                     />
                     <Label htmlFor="employee" className="font-normal">Employee</Label>
                   </div>
@@ -124,7 +127,7 @@ const Login = () => {
                       value="customer"
                       checked={selectedRole === "customer"}
                       onChange={() => setSelectedRole("customer")}
-                      className="h-4 w-4 text-cvk-purple focus:ring-cvk-purple border-gray-300"
+                      className="h-5 w-5 accent-cvk-purple focus:ring-2 focus:ring-cvk-blue transition-all duration-200"
                     />
                     <Label htmlFor="customer" className="font-normal">Customer</Label>
                   </div>
@@ -133,7 +136,7 @@ const Login = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-cvk-purple hover:bg-cvk-darkpurple"
+                className="w-full bg-gradient-to-r from-cvk-purple via-cvk-blue to-cvk-darkpurple hover:from-cvk-darkpurple hover:to-cvk-purple transition-all duration-300 shadow-lg"
               >
                 Login
               </Button>

@@ -5,28 +5,28 @@ import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Virat Kohli",
     position: "Sales Manager",
-    company: "TechGrow Inc.",
-    content: "CVK CRM has transformed how we manage client relationships. The intuitive interface saves us hours of data entry, and the insights help us close deals faster. It's been a game-changer for our team.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+    company: "Pipedrive.",
+    content: "CVK CRM makes client management so much easier. It's super easy to use and helps us close deals faster—definitely a game-changer for our team.",
+    rating: 4,
+    image: "https://images.mid-day.com/images/images/2017/jun/viratkohliforbes.jpg"
   },
   {
-    name: "Michael Chen",
+    name: "Rohit Sharma",
     position: "Marketing Director",
     company: "Pulse Media",
-    content: "After trying multiple CRM solutions, CVK stands out for its perfect balance of powerful features and ease of use. Our team adopted it quickly, and our customer satisfaction scores have improved by 28%.",
+    content: "We've explored several CRM platforms, but CVK strikes the ideal balance between functionality and usability. It was easy for our team to adopt, and we've seen a 28% boost in customer satisfaction since making the switch.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4xCscExGt2pxsEBj_vTRITIdNycbK9uSmQg&s"
   },
   {
-    name: "Alisha Patel",
+    name: "shreyas Iyer",
     position: "Customer Success Lead",
-    company: "Momentum SaaS",
+    company: "SAP",
     content: "The automation capabilities in CVK CRM have saved our small team countless hours. We're able to provide personalized service at scale, which was impossible before. Highly recommended!",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFm5rm_dgCkzOoKFEbmxBLG382ISc63BxDIA&s"
   },
   {
     name: "Thomas Wilson",
@@ -74,7 +74,7 @@ const Testimonials = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by businesses worldwide</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See what our customers have to say about their experience with CVK CRM.
+            See what our customers have to say about their experience with CVK.
           </p>
         </div>
         

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,15 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-        cvk: {
-          purple: '#9b87f5',
-          darkpurple: '#7E69AB',
-          lightpurple: '#E5DEFF',
-          blue: '#0EA5E9',
-          green: '#4ade80',
-          gray: '#8E9196',
-          darkgray: '#403E43',
-        },
+				'cvk-purple': '#a78bfa',
+				'cvk-darkpurple': '#7c3aed',
+				'cvk-blue': '#14b8a6',
+				'cvk-lightpurple': '#ede9fe',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -95,19 +89,20 @@ export default {
 						height: '0'
 					}
 				},
-        'float': {
-          '0%, 100%': {
-            transform: 'translateY(0)',
-          },
-          '50%': {
-            transform: 'translateY(-10px)',
-          },
-        },
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-        'float': 'float 6s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 			}
 		}
 	},
