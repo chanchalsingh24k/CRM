@@ -14,10 +14,10 @@ A custom CRM (Customer Relationship Management) web application built using Reac
 ## 🛠️ Tech Stack
 
 - **Frontend**: React, TypeScript, Vite
-- **Styling**: Tailwind CSS (optional), CSS Modules or SCSS
+- **Styling**: Tailwind CSS 
 - **State Management**: React Context
-- **Backend**: Node.js, Express (optional)
-- **Database**: MongoDB / PostgreSQL / Firebase (optional)
+- **Backend**: Node.js.
+- **Database**: MongoDB
 - **Deployment**: GitHub Pages
 
 ## 📦 Getting Started
