@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const PaymentMethodPage = () => {
-  const [method, setMethod] = useState<'debit' | 'upi'>('debit');
+  const [method, setMethod] = useState('debit');
   const [card, setCard] = useState({ number: '', name: '', expiry: '', cvv: '' });
   const [upi, setUpi] = useState('');
 

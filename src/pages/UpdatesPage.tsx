@@ -10,15 +10,15 @@ const UpdatesPage = () => (
       <h2 className="text-2xl font-bold mb-4">Recent Updates</h2>
       <div className="space-y-6">
         <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-xl font-bold mb-2">March 2024: Enhanced Email Integration</h3>
+          <h3 className="text-xl font-bold mb-2">March 2025: Enhanced Email Integration</h3>
           <p className="text-gray-600">Now connect Gmail and Outlook with one click, track email opens, and automate follow-ups directly from your CRM.</p>
         </div>
         <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-xl font-bold mb-2">February 2024: New Analytics Dashboard</h3>
+          <h3 className="text-xl font-bold mb-2">February 2025: New Analytics Dashboard</h3>
           <p className="text-gray-600">Get deeper insights with customizable dashboards, advanced filters, and exportable reports.</p>
         </div>
         <div className="bg-white rounded-xl shadow p-6">
-          <h3 className="text-xl font-bold mb-2">January 2024: Security Upgrades</h3>
+          <h3 className="text-xl font-bold mb-2">January 2025: Security Upgrades</h3>
           <p className="text-gray-600">Two-factor authentication, improved audit logs, and GDPR compliance tools are now available for all users.</p>
         </div>
       </div>

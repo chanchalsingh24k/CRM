@@ -1,3 +1,4 @@
+// This file should be renamed to Index.jsx
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import DashboardPreview from "@/components/DashboardPreview";

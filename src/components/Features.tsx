@@ -140,22 +140,32 @@ const Features = () => {
                 ))}
               </ul>
             </div>
-            <div className="lg:col-span-2 relative min-h-[300px] flex items-center justify-center">
-              <div className="absolute -z-10 bottom-0 right-0 w-72 h-72 rounded-full bg-[#a1c4fd]/30 blur-3xl"></div>
-              <div className="bg-white border border-blue-100 rounded-2xl overflow-hidden shadow-xl" style={{ minWidth: 340, maxWidth: 500 }}>
-                <div className="h-11 bg-gray-50 flex items-center px-4 border-b border-blue-50">
-                  <div className="flex space-x-2">
+            <div className="lg:col-span-2 relative min-h-[400px] flex items-center justify-center">
+              <div className="absolute -z-10 bottom-0 right-0 w-96 h-96 rounded-full bg-[#a1c4fd]/30 blur-3xl flex items-center justify-center">
+                <svg className="animate-pulse" width="80" height="80" viewBox="0 0 80 80" fill="none" style={{ opacity: 0.25 }}>
+                  <circle cx="40" cy="40" r="38" stroke="#4285F4" strokeWidth="4" />
+                  <polygon points="34,28 58,40 34,52" fill="#4285F4" />
+                </svg>
+              </div>
+              <div className="bg-white border border-blue-100 rounded-2xl overflow-hidden shadow-xl" style={{ minWidth: 440, maxWidth: 700 }}>
+                <div className="h-14 bg-gray-50 flex items-center px-4 border-b border-blue-50 justify-between">
+                  <div className="flex space-x-2 items-center">
                     <div className="w-3 h-3 rounded-full bg-gray-300"></div>
                     <div className="w-3 h-3 rounded-full bg-gray-300"></div>
                     <div className="w-3 h-3 rounded-full bg-gray-300"></div>
+                    <span className="ml-4 flex items-center text-red-500 font-semibold text-sm">
+                      <svg height="20" viewBox="0 0 24 24" width="20" fill="currentColor" className="mr-1"><path d="M21.8 8.001s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.8-.9C16.2 5 12 5 12 5h-.1s-4.2 0-7.2.1c-.3 0-1.1.1-1.8.9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.7.8 1.7.8 2.1.9 1.5.1 6.9.1 6.9.1s4.2 0 7.2-.1c.3 0 1.1-.1 1.8-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.6c0-1.6-.2-3.2-.2-3.2zM9.8 15.1V8.9l6.4 3.1-6.4 3.1z"/></svg>
+                      Watch Demo
+                    </span>
                   </div>
+                  <span className="text-xs text-gray-400 font-medium">CRM Video</span>
                 </div>
-                <div className="p-0 flex items-center justify-center bg-white" style={{ minHeight: '260px' }}>
-                  <div className="w-full max-w-xl aspect-video rounded-b-2xl overflow-hidden shadow-lg bg-white">
+                <div className="p-0 flex items-center justify-center bg-white" style={{ minHeight: '340px' }}>
+                  <div className="w-full max-w-2xl aspect-video rounded-b-2xl overflow-hidden shadow-lg bg-white">
                     <iframe
                       width="100%"
                       height="100%"
-                      src="https://www.youtube.com/embed/Yd3CNZL-o3Y?autoplay=1&mute=1&loop=1&playlist=Yd3CNZL-o3Y"
+                      src="https://www.youtube.com/embed/sQD7kaZ5h0s?autoplay=1&mute=1&loop=1&playlist=sQD7kaZ5h0s"
                       title="CRM Features Explainer"
                       frameBorder="0"
                       allow="autoplay; encrypted-media"

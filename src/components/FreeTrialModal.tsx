@@ -47,8 +47,44 @@ const AuthModal: React.FC<AuthModalProps> = ({ open: openProp, onClose }) => {
                 <input type="text" placeholder="Enter your name" style={{ width: '100%', padding: 12, borderRadius: 6, border: '1px solid #ddd', fontSize: 16 }} />
               </div>
               <div style={{ marginBottom: 24 }}>
-                <label style={{ fontWeight: 500, display: 'block', marginBottom: 4 }}>Phone Number or Email</label>
-                <input type="text" placeholder="Enter your phone number or email" style={{ width: '100%', padding: 12, borderRadius: 6, border: '1px solid #ddd', fontSize: 16 }} />
+                <label style={{ fontWeight: 500, display: 'block', marginBottom: 4 }}>Phone Number</label>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <select
+                    style={{
+                      padding: '12px',
+                      borderRadius: '6px',
+                      border: '1px solid #ddd',
+                      fontSize: '16px',
+                      width: '40%',
+                    }}
+                    defaultValue="+91"
+                  >
+                    <option value="+1">🇺🇸 +1 (US)</option>
+                    <option value="+91">🇮🇳 +91 (India)</option>
+                    <option value="+44">🇬🇧 +44 (UK)</option>
+                    <option value="+61">🇦🇺 +61 (Australia)</option>
+                    <option value="+81">🇯🇵 +81 (Japan)</option>
+                    <option value="+49">🇩🇪 +49 (Germany)</option>
+                    <option value="+33">🇫🇷 +33 (France)</option>
+                    <option value="+86">🇨🇳 +86 (China)</option>
+                    <option value="+971">🇦🇪 +971 (UAE)</option>
+                    <option value="+92">🇵🇰 +92 (Pakistan)</option>
+                  </select>
+                  <input
+                    type="tel"
+                    maxLength={10}
+                    pattern="[0-9]*"
+                    inputMode="numeric"
+                    placeholder="Enter 10-digit number"
+                    style={{
+                      flex: 1,
+                      padding: 12,
+                      borderRadius: 6,
+                      border: '1px solid #ddd',
+                      fontSize: 16,
+                    }}
+                  />
+                </div>
               </div>
               <button type="submit" style={{ width: '100%', background: '#222', color: '#fff', padding: 14, borderRadius: 6, fontWeight: 700, fontSize: 18, border: 'none', cursor: 'pointer', marginBottom: 8, transition: 'background 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.background = '#333'} onMouseOut={(e) => e.currentTarget.style.background = '#222'}>
                 Submit
@@ -66,8 +102,44 @@ const AuthModal: React.FC<AuthModalProps> = ({ open: openProp, onClose }) => {
             <h2 style={{ fontWeight: 700, fontSize: 28, marginBottom: 8 }}>Login to your account</h2>
             <form>
               <div style={{ marginBottom: 16 }}>
-                <label style={{ fontWeight: 500, display: 'block', marginBottom: 4 }}>Phone Number or Email</label>
-                <input type="text" placeholder="Enter your phone number or email" style={{ width: '100%', padding: 12, borderRadius: 6, border: '1px solid #ddd', fontSize: 16 }} />
+                <label style={{ fontWeight: 500, display: 'block', marginBottom: 4 }}>Phone Number</label>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <select
+                    style={{
+                      padding: '12px',
+                      borderRadius: '6px',
+                      border: '1px solid #ddd',
+                      fontSize: '16px',
+                      width: '40%',
+                    }}
+                    defaultValue="+91"
+                  >
+                    <option value="+1">🇺🇸 +1 (US)</option>
+                    <option value="+91">🇮🇳 +91 (India)</option>
+                    <option value="+44">🇬🇧 +44 (UK)</option>
+                    <option value="+61">🇦🇺 +61 (Australia)</option>
+                    <option value="+81">🇯🇵 +81 (Japan)</option>
+                    <option value="+49">🇩🇪 +49 (Germany)</option>
+                    <option value="+33">🇫🇷 +33 (France)</option>
+                    <option value="+86">🇨🇳 +86 (China)</option>
+                    <option value="+971">🇦🇪 +971 (UAE)</option>
+                    <option value="+92">🇵🇰 +92 (Pakistan)</option>
+                  </select>
+                  <input
+                    type="tel"
+                    maxLength={10}
+                    pattern="[0-9]*"
+                    inputMode="numeric"
+                    placeholder="Enter 10-digit number"
+                    style={{
+                      flex: 1,
+                      padding: 12,
+                      borderRadius: 6,
+                      border: '1px solid #ddd',
+                      fontSize: 16,
+                    }}
+                  />
+                </div>
               </div>
               <div style={{ marginBottom: 24 }}>
                 <label style={{ fontWeight: 500, display: 'block', marginBottom: 4 }}>Password</label>
@@ -90,4 +162,4 @@ const AuthModal: React.FC<AuthModalProps> = ({ open: openProp, onClose }) => {
   );
 };
 
-export default AuthModal; 
+export default AuthModal;

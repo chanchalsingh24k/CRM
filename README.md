@@ -1,55 +1,31 @@
-# Welcome to my  project
+# CRM Website
 
-## Project info
+A custom CRM (Customer Relationship Management) web application built using React and TypeScript.
 
-**URL**: https://github.com/chanchalsingh24k/CRM.git
+## 🚀 Features
 
+- 🧑‍💼 Contact and customer management
+- ✅ Task and activity tracking
+- 📊 Dashboard and analytics
+- 💬 Notes and interactions
+- 📱 Responsive design
+- ⚡ Fast performance with Vite
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Tailwind CSS (optional), CSS Modules or SCSS
+- **State Management**: React Context
+- **Backend**: Node.js, Express (optional)
+- **Database**: MongoDB / PostgreSQL / Firebase (optional)
+- **Deployment**: GitHub Pages
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Getting Started
 
-Follow these steps:
+Follow these steps to run the project locally:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1. Clone the repository
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-
-
+```bash
+git clone https://github.com/chanchalsingh24k/crm-website.git
+cd crm-website
